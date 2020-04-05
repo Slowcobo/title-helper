@@ -1,0 +1,68 @@
+@font-face {
+    font-family: Humming;
+    src: url(resources/nintendoP_Humming-E_002pr.otf);
+}
+
+body {
+    color: #948b6c;
+    background-color: #9cb58b;
+    text-align: center;
+    font-family: Humming;
+    font-size: 20px;
+}
+
+.seperator {
+    display: inline-block;
+}
+
+.titleback {
+    background-color: #ede5c1;
+    background-image: url(resources/titleseparator.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    width: 650px;
+    margin: 15px 60px;
+    border-radius: 60px;
+}
+
+#title1 {
+    width: 300px;
+    text-align: right;
+    float: left;
+}
+
+#title2 {
+    width: 300px;
+    text-align: left;
+    float: right;
+}
+
+#titlepicker {
+    width: 880px;
+    height: 530px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fefae1;
+    border-radius: 60px;
+    box-shadow: 20px -30px #cfe0bc;
+  }
+
+  #change {
+      font-size: 16px;
+      font-family: Humming;
+      color: #fefae1;
+      background-color: #0cc6b8;
+      padding: 20px 30px;
+      border-radius: 50px;
+      border: 0px;
+      outline: none;
+      float: right;
+      position: absolute;
+      top: 45%;
+      right: 3%;
+  }
