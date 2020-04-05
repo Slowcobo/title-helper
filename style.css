@@ -31,18 +31,34 @@ div * {
     border-radius: 60px;
 }
 
+.active {
+    color: #4a3b3a;
+    background-color: #fff33c;
+    width: fit-content;
+}
+
 #left_title {
     width: 300px;
     height: 500px;
+    padding: 35% 0;
     text-align: right;
     float: left;
+}
+
+#left_title .active {
+    margin-left: auto;
 }
 
 #right_title {
     width: 300px;
     height: 500px;
+    padding: 35% 0;
     text-align: left;
     float: right;
+}
+
+#right_title .active {
+    margin-right: auto;
 }
 
 #titlepicker {
@@ -70,7 +86,7 @@ div * {
       outline: none;
       float: right;
       position: absolute;
-      top: 45%;
+      top: 42%;
       right: 3%;
   }
 
