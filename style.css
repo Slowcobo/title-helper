@@ -8,7 +8,12 @@ body {
     background-color: #9cb58b;
     text-align: center;
     font-family: Humming;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+div * {
+    scrollbar-width: none;
+    overflow: scroll;
 }
 
 .seperator {
@@ -26,14 +31,16 @@ body {
     border-radius: 60px;
 }
 
-#title1 {
+#left_title {
     width: 300px;
+    height: 500px;
     text-align: right;
     float: left;
 }
 
-#title2 {
+#right_title {
     width: 300px;
+    height: 500px;
     text-align: left;
     float: right;
 }
@@ -66,3 +73,11 @@ body {
       top: 45%;
       right: 3%;
   }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar:hover {
+    display: auto;
+}
