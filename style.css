@@ -3,6 +3,11 @@
     src: url(resources/nintendoP_Humming-E_002pr.otf);
 }
 
+@keyframes stripes {
+    from { background-position: 0 0; }
+    to { background-position: 80px 40px; }
+}
+
 body {
     color: #948b6c;
     animation: 80s linear 0s infinite forwards;
@@ -36,30 +41,12 @@ button {
     border-radius: 60px;
 }
 
+.filler {
+    padding: 39%;
+}
+
 .active {
     color: #4a3b3a;
-    background-color: #fff33c;
-    width: fit-content;
-}
-
-.pattern-animate {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-repeat: repeat;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.pattern-animate--confetti {
-    animation: pattern_anim_confetti 80s linear 0s infinite forwards;
-    background-image: url(resources/pattern-confetti.jpg);
-    background-size: 500px 500px;
-    height: calc(100% + 500px);
-    width: calc(100% + 500px);
 }
 
 #left_title {
@@ -67,10 +54,8 @@ button {
     height: 500px;
     text-align: right;
     float: left;
-}
-
-#left_title .active {
-    margin-left: auto;
+    position: relative;
+    z-index: 1;
 }
 
 #right_title {
@@ -78,10 +63,32 @@ button {
     height: 500px;
     text-align: left;
     float: right;
+    position: relative;
+    z-index: 1;
 }
 
-#right_title .active {
-    margin-right: auto;
+#highlight {
+    width: 600px;
+    height: 45px;
+    background-color: #fff775;
+    background-size: 40px 40px;
+    background-image: linear-gradient(
+        -45deg,
+        #fff437 25%,
+        transparent 25%,
+        transparent 50%,
+        #fff437 50%,
+        #fff437 75%,
+        transparent 75%,
+        transparent
+    );
+    animation: stripes 2s linear infinite;  
+    position: absolute;
+    margin-top: 27.5%;
+    margin-left: 9.5%;
+    z-index: 0;
+    border-radius: 10px;
+    
 }
 
 #titlepicker {
@@ -102,18 +109,31 @@ button {
       font-family: Humming;
       color: #fefae1;
       background-color: #0cc6b8;
-      padding: 20px 30px;
+      padding: 10px 30px;
       border-radius: 50px;
-      border: 0px;
+      border: 4px solid transparent;
       outline: none;
       float: right;
       position: absolute;
-      top: 42%;
+      top: 44%;
       right: 3%;
   }
 
   #change:hover {
-    transform: scale(1.05);
+    background-color: #0dc3b6;
+    background-size: 40px 40px;
+    background-image: linear-gradient(
+        -45deg,
+        #01b1a4 25%,
+        transparent 25%,
+        transparent 50%,
+        #01b1a4 50%,
+        #01b1a4 75%,
+        transparent 75%,
+        transparent
+    );
+    animation: stripes 2s linear infinite;
+    border: 4px solid #4ae3d5;
   }
 
 ::-webkit-scrollbar {
