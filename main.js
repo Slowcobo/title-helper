@@ -28,7 +28,6 @@ const randomizeTitle = (currLeft, currRight) => {
     while (rightTitle.title === currRight) {
         rightTitle = rightTitles[Math.floor(Math.random() * rightTitles.length)];
     }
-
     return [leftTitle, rightTitle];
 }
 
@@ -53,7 +52,7 @@ const centerActive = () => {
     let leftActive = leftTitle.getElementsByClassName('active')[0];
     let rightActive = rightTitle.getElementsByClassName('active')[0];  
     let isScrolling;
-    
+
     leftTitle.addEventListener('scroll', function (event) {
         window.clearTimeout(isScrolling);
         isScrolling = setTimeout(function() {
@@ -70,6 +69,7 @@ const centerActive = () => {
     });
 }
 
+//Set title info to new active titles
 const updateTitleInfo = (newLeft, newRight) => {
     //Update left title info
     leftInfo.children[0].innerHTML = newLeft.task.name;
@@ -82,9 +82,27 @@ const updateTitleInfo = (newLeft, newRight) => {
     rightInfo.style.backgroundColor = newRight.task.color;
 }
 
+//Displays title info for the new active titles
+const displayTitleInfo = () => {
+    let isScrolling;
+    rightTitle.addEventListener('scroll', function (event) {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(function() {
+            leftInfo.style.opacity = '1';
+            leftInfo.style.setProperty('animation', 'pop 0.3s linear 1');
+            rightInfo.style.opacity = '1';
+            rightInfo.style.setProperty('animation', 'pop 0.3s linear 1');
+        }, 66);
+    }, false);
+
+    leftInfo.style.removeProperty('animation');
+    rightInfo.style.removeProperty('animation');
+}
+
 //Prevent manual scrolling through titles
-leftTitle.addEventListener('wheel', function(e) { e.preventDefault(); }, { passive: false });
-rightTitle.addEventListener('wheel', function(e) { e.preventDefault(); }, { passive: false });
+window.addEventListener('wheel', function(e) { e.preventDefault(); }, { passive: false });
+//leftTitle.addEventListener('wheel', function(e) { e.preventDefault(); }, { passive: false });
+//rightTitle.addEventListener('wheel', function(e) { e.preventDefault(); }, { passive: false });
 
 //Prepend lists with filler blanks
 leftTitle.innerHTML += '<p class="filler"></p>';
@@ -110,14 +128,15 @@ setActive(leftTitles[0], rightTitles[0]);
 changeButton.onclick = () => {
     //Check for currently active titles
     let currentTitles = document.getElementsByClassName('active');
-    let currLeft = currentTitles[0];
-    let currRight = currentTitles[1];
-
-    console.log('currLeft ' + currLeft);
-    console.log('currRight ' + currRight);
+    let currLeft = currentTitles[0].textContent;
+    let currRight = currentTitles[1].textContent;
 
     //Clear the current active title
     clearActive();
+
+    //Hide title info for previous titles
+    leftInfo.style.opacity = 0;
+    rightInfo.style.opacity = 0;
     
     //Grab new random titles that don't match the currently active
     let newTitles = randomizeTitle(currLeft, currRight);
@@ -128,6 +147,10 @@ changeButton.onclick = () => {
     //Scroll active titles to the center
     centerActive();
 
+    //Display new title info
+    displayTitleInfo();
+    
     //Update info cards with random titles
     updateTitleInfo(newTitles[0], newTitles[1]);
 }
+

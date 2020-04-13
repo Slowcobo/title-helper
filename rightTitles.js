@@ -298,7 +298,7 @@ const rightTitles = [
         task: tasks[205]
     },
     {
-        title: 'Groom/Birde',
+        title: 'Groom/Bride',
         task: tasks[72]
     },
     {

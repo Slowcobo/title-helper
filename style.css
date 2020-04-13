@@ -13,6 +13,10 @@
     to { background-position: 80px 40px; }
 }
 
+@keyframes pop{
+    50%  { transform: scale(1.1); }
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -23,6 +27,8 @@
 
 h1 {
     font-family: Rodin;
+    color: #fefae1;
+    margin: 0;
 }
 
 body {
@@ -47,6 +53,7 @@ footer {
     font-size: 10px;
     padding: 10%;
     position: relative;
+    bottom: 0;
 }
 
 .seperator {
@@ -80,7 +87,11 @@ footer {
 
 .task_description {
     font-size: 14px;
-    padding: 20px;
+    padding: 25px;
+}
+
+.pop {
+    opacity: 1;
 }
 
 #left_title {
@@ -178,28 +189,41 @@ footer {
   }
 
   #title_info {
-      width: 800px;
+      width: 700px;
+      height: fit-content;
       position: relative;
       margin: auto;
-      padding-top: 2rem;
+      padding-top: 30px;
   }
 
   #left_info {
-    color: #4a3b3a;
+    color: #5a5127;
     background-color: #fefae1;
     border: 10px solid #fefae1;
-    width: 350px;
+    width: 300px;
     float: left;
     min-height: 150px;
     transform: rotate(-2deg);
+    transition: transform 0.1s;
+    opacity: 0;
+  }
+
+  #left_info:hover {
+      transform: rotate(2deg);
   }
 
   #right_info {
-    color: #4a3b3a;
+    color: #5a5127;
     background-color: #fefae1;
     border: 10px solid #fefae1;
-    width: 350px;
+    width: 300px;
     float: right;
     min-height: 150px;
     transform: rotate(2deg);
+    transition: transform 0.1s;
+    opacity: 0;
+  }
+
+  #right_info:hover {
+      transform: rotate(-2deg);
   }
