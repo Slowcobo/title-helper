@@ -1,6 +1,11 @@
 @font-face {
-    font-family: Humming;
-    src: url(resources/nintendoP_Humming-E_002pr.otf);
+    font-family: Seurat;
+    src: url(resources/fonts/nintendoP_Seurat-B.ttf);
+}
+
+@font-face {
+    font-family: Rodin;
+    src: url(resources/fonts/nintendoP_RodinNTLG-EB_003_Park.otf);
 }
 
 @keyframes stripes {
@@ -8,12 +13,24 @@
     to { background-position: 80px 40px; }
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar:hover {
+    display: auto;
+}
+
+h1 {
+    font-family: Rodin;
+}
+
 body {
     color: #948b6c;
     animation: 80s linear 0s infinite forwards;
-    background-image: url(resources/pattern-confetti.jpg);
+    background-image: url(resources/images/pattern-confetti.jpg);
     text-align: center;
-    font-family: Humming;
+    font-family: Seurat;
     font-size: 18px;
 }
 
@@ -26,27 +43,44 @@ button {
     cursor: pointer;
 }
 
+footer {
+    font-size: 10px;
+    padding: 10%;
+    position: relative;
+}
+
 .seperator {
     display: inline-block;
 }
 
-.titlecol {
+.title_columns {
     background-color: #ede5c1;
-    background-image: url(resources/titleseparator.png);
+    background-image: url(resources/images/titleseparator.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 500px;
     width: 650px;
+    position: absolute;
     margin: 15px 60px;
     border-radius: 60px;
 }
 
 .filler {
-    padding: 39%;
+    padding: 33%;
 }
 
 .active {
     color: #4a3b3a;
+}
+
+.task_name {
+    background-image: url(/resources/images/task_name_back.png);
+    padding: 10px;
+}
+
+.task_description {
+    font-size: 14px;
+    padding: 20px;
 }
 
 #left_title {
@@ -55,7 +89,11 @@ button {
     text-align: right;
     float: left;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+
+#left_title div {
+    padding: 1%;
 }
 
 #right_title {
@@ -64,12 +102,21 @@ button {
     text-align: left;
     float: right;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+
+#right_title div {
+    padding: 1%;
 }
 
 #highlight {
     width: 600px;
     height: 45px;
+    position: absolute;
+    margin-top: 27.7%;
+    margin-left: 9.5%;
+    z-index: 1;
+    border-radius: 10px;
     background-color: #fff775;
     background-size: 40px 40px;
     background-image: linear-gradient(
@@ -83,22 +130,12 @@ button {
         transparent
     );
     animation: stripes 2s linear infinite;  
-    position: absolute;
-    margin-top: 27.5%;
-    margin-left: 9.5%;
-    z-index: 0;
-    border-radius: 10px;
-    
 }
 
-#titlepicker {
+#title_helper {
     width: 880px;
     height: 530px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     margin: auto;
     background-color: #fefae1;
     border-radius: 60px;
@@ -106,7 +143,7 @@ button {
 
   #change {
       font-size: 16px;
-      font-family: Humming;
+      font-family: Seurat;
       color: #fefae1;
       background-color: #0cc6b8;
       padding: 10px 30px;
@@ -115,7 +152,7 @@ button {
       outline: none;
       float: right;
       position: absolute;
-      top: 44%;
+      top: 45%;
       right: 3%;
   }
 
@@ -136,10 +173,33 @@ button {
     border: 4px solid #4ae3d5;
   }
 
-::-webkit-scrollbar {
-    display: none;
-}
+  #ribbon {
+      padding: 1%;
+  }
 
-::-webkit-scrollbar:hover {
-    display: auto;
-}
+  #title_info {
+      width: 800px;
+      position: relative;
+      margin: auto;
+      padding-top: 2rem;
+  }
+
+  #left_info {
+    color: #4a3b3a;
+    background-color: #fefae1;
+    border: 10px solid #fefae1;
+    width: 350px;
+    float: left;
+    min-height: 150px;
+    transform: rotate(-2deg);
+  }
+
+  #right_info {
+    color: #4a3b3a;
+    background-color: #fefae1;
+    border: 10px solid #fefae1;
+    width: 350px;
+    float: right;
+    min-height: 150px;
+    transform: rotate(2deg);
+  }
