@@ -1,4 +1,4 @@
-import tasks from 'tasks.js';
+import tasks from './tasks';
 
 const leftTitles = [
     { 
