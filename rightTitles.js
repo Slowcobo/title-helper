@@ -1,4 +1,4 @@
-import tasks from './tasks.js';
+import tasks from 'https://slowcobo.github.io/title-helper/tasks.js';
 
 const rightTitles = [
     {
