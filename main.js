@@ -1,5 +1,5 @@
-import leftTitles from 'https://slowcobo.github.io/title-helper/leftTitles.js';
-import rightTitles from 'https://slowcobo.github.io/title-helper/rightTitles.js';
+import leftTitles from 'leftTitles.js';
+import rightTitles from 'rightTitles.js';
 
 let leftTitle = document.getElementById('left_title');
 let rightTitle = document.getElementById('right_title');

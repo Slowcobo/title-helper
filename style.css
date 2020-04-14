@@ -1,11 +1,11 @@
 @font-face {
     font-family: Seurat;
-    src: url(https://slowcobo.github.io/title-helper/resources/fonts/nintendoP_Seurat-B.ttf);
+    src: url(resources/fonts/nintendoP_Seurat-B.ttf);
 }
 
 @font-face {
     font-family: Rodin;
-    src: url(https://slowcobo.github.io/title-helper/resources/fonts/nintendoP_RodinNTLG-EB_003_Park.otf);
+    src: url(resources/fonts/nintendoP_RodinNTLG-EB_003_Park.otf);
 }
 
 @keyframes stripes {
@@ -27,7 +27,7 @@
 
 body {
     color: #948b6c;
-    background-image: url(https://slowcobo.github.io/title-helper/resources/images/pattern-confetti.jpg);
+    background-image: url(resources/images/pattern-confetti.jpg);
     text-align: center;
     font-family: Seurat;
     font-size: 18px;
@@ -154,7 +154,7 @@ footer {
 }
 
 #ribbon::before, #ribbon::after {
-    content: url(https://slowcobo.github.io/title-helper/resources/images/ribbon-end.png);
+    content: url(resources/images/ribbon-end.png);
     display: inline-block;
 }
 
@@ -196,7 +196,7 @@ footer {
 }
 
 #title_helper {
-    width: fit-content;
+    width: min-content;
     height: 28.7rem;
     position: relative;
     margin: auto;
@@ -235,14 +235,14 @@ footer {
 }
 
 .task_name {
-    background-image: url(https://slowcobo.github.io/title-helper/resources/images/task_name_back.png);
+    background-image: url(resources/images/task_name_back.png);
     background-repeat: repeat-x;
     padding: 0.7rem;
 }
 
 .title_columns {
     background-color: #ede5c1;
-    background-image: url(https://slowcobo.github.io/title-helper/resources/images/titleseparator.png);
+    background-image: url(resources/images/titleseparator.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 40.5rem;
