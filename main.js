@@ -1,5 +1,5 @@
-import leftTitles from './leftTitles';
-import rightTitles from './rightTitles';
+import leftTitles from './leftTitles.js';
+import rightTitles from './rightTitles.js';
 
 let leftTitle = document.getElementById('left_title');
 let rightTitle = document.getElementById('right_title');
