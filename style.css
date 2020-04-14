@@ -25,6 +25,10 @@
     display: auto;
 }
 
+html, body { 
+    overflow-x: hidden !important;
+}
+
 body {
     color: #948b6c;
     background-image: url(resources/images/pattern-confetti.jpg);
