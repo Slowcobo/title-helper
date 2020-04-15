@@ -73,9 +73,7 @@ footer {
     font-size: 10px;
     color: #4a3b3a;
     display: block;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    position: relative;
 }
 
 #change {
@@ -88,7 +86,7 @@ footer {
     border: 0.3rem solid transparent;
     outline: none;
     position: relative;
-    margin-top: 0.75rem;
+    margin-top: 0.755rem;
 }
 
 #change:hover {
@@ -224,7 +222,7 @@ footer {
 
 #title_info {
     width: 43.75rem;
-    height: 25rem;
+    min-height: 13rem;
     position: relative;
     margin: 2rem auto;
 }
