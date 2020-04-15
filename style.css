@@ -25,8 +25,18 @@
     display: auto;
 }
 
+* {
+    box-sizing: border-box;
+   }
+*:before, *:after {
+    box-sizing: border-box;
+}
+
 html, body { 
     overflow: hidden;
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
 }
 
 body {
@@ -54,7 +64,7 @@ h1 {
     color: #fefae1;
     display: inline-block;
     padding: 0.75rem;
-    height: 2.45rem;
+    height: 3.95rem;
     min-width: 25rem;
     margin-bottom: 1.2rem;
 }
@@ -203,7 +213,7 @@ footer {
 
 #title_helper {
     width: min-content;
-    height: 28.7rem;
+    height: 30.9rem;
     position: relative;
     margin: auto;
     padding: 1rem;
