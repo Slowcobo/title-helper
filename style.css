@@ -35,14 +35,15 @@
 html, body { 
     overflow: hidden;
     box-sizing: border-box;
-    height: 100%;
     position: relative;
+    height: 100%;
 }
 
 body {
     color: #948b6c;
     background-image: url(resources/images/pattern-confetti.jpg);
     min-width: min-content;
+    height: auto;
     text-align: center;
     font-family: Seurat;
     font-size: 18px;
