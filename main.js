@@ -36,13 +36,13 @@ const setActive = (newLeft, newRight) => {
     //Find the titles in the list and set them active
     for (let i = 0; i < leftTitle.children.length; i++) {
         if (leftTitle.children[i].textContent === newLeft.title) {
-            leftTitle.children[i].className = 'active';
+            leftTitle.children[i].classList.add('active');
         }
     }
 
     for (let i = 0; i < rightTitle.children.length; i++) {
         if (rightTitle.children[i].textContent === newRight.title) {
-            rightTitle.children[i].className = 'active';
+            rightTitle.children[i].classList.add('active');
         }
     }
  }
