@@ -20,15 +20,11 @@
     display: none;
 }
 
-::-webkit-scrollbar:hover {
-    display: auto;
-}
-
 body {
     font-family: 'Seurat', Arial, Helvetica, sans-serif;
     color: #948b6c;
     background-image: url(resources/images/pattern-leaves-turquoise.jpg);
-    min-width: min-content;
+    width: 42.5rem;
     max-width: min-content;
     margin: auto;
     text-align: center;
@@ -38,6 +34,7 @@ body {
 div * {
     scrollbar-width: none;
     overflow: scroll;
+    -ms-overflow-style: none;
 }
 
 footer {
@@ -116,7 +113,7 @@ img {
     width: 37.5rem;
     height: 2.5rem;
     position: absolute;
-    margin-top: 9.4rem;
+    margin-top: 8.4rem;
     margin-left: 1.5rem;
     border-radius: 0.6rem;
     animation: stripes 2s linear infinite;  
@@ -183,6 +180,7 @@ img {
     background-image: url(resources/images/titleseparator.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    height: 19rem;
     width: 40.5rem;
     border-radius: 1rem;
     -webkit-user-select: none;
@@ -190,7 +188,6 @@ img {
 }
 
 #title_helper {
-    max-width: min-content;
     padding: 1rem;
     background-color: #fefae1;
     border-radius: 1rem;
@@ -210,7 +207,7 @@ img {
 }
 
 .filler {
-    padding: 3.5rem;
+    padding: 3rem;
 }
 
 .pop {
@@ -225,5 +222,5 @@ img {
 .task_name {
     background-image: url(resources/images/task_name_back.png);
     background-repeat: repeat-x;
-    padding: 0.8rem 0 1.5rem 0;
+    padding: 0.8rem 0 2rem 0;
 }
