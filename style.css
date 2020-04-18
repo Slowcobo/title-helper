@@ -1,11 +1,7 @@
 @font-face {
     font-family: Seurat;
     src: url(resources/fonts/nintendoP_Seurat-B.ttf);
-}
-
-@font-face {
-    font-family: Rodin;
-    src: url(resources/fonts/nintendoP_RodinNTLG-EB_003_Park.otf);
+    font-display: swap;
 }
 
 @keyframes stripes {
@@ -14,7 +10,7 @@
 }
 
 @keyframes pop{
-    50%  { transform: scale(1.1); }
+    50%  { transform: scale(1.05); }
 }
 
 ::-webkit-scrollbar {
@@ -25,49 +21,19 @@
     display: auto;
 }
 
-* {
-    box-sizing: border-box;
-   }
-*:before, *:after {
-    box-sizing: border-box;
-}
-
-html, body { 
-    overflow: hidden;
-    box-sizing: border-box;
-    position: relative;
-    height: 100%;
-}
-
 body {
+    font-family: 'Seurat', Arial, Helvetica, sans-serif;
     color: #948b6c;
-    background-image: url(resources/images/pattern-confetti.jpg);
+    background-image: url(resources/images/pattern-leaves-turquoise.jpg);
     min-width: min-content;
-    height: auto;
+    max-width: min-content;
+    margin: auto;
     text-align: center;
-    font-family: Seurat;
     font-size: 18px;
 }
 
-button {
-    cursor: pointer;
-}
-
 div * {
-    scrollbar-width: none;
     overflow: scroll;
-}
-
-h1 {
-    font-family: Rodin;
-    font-size: 24px;
-    background-color: #4f60e8;
-    color: #fefae1;
-    display: inline-block;
-    padding: 0.75rem;
-    height: 3.95rem;
-    min-width: 25rem;
-    margin-bottom: 1.2rem;
 }
 
 footer {
@@ -77,17 +43,34 @@ footer {
     position: relative;
 }
 
+h1 {
+    color: #7cc9c3;
+    margin: 0;
+}
+
+header {
+    background-color: #fefae1;    
+    background-repeat: repeat-x;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.2);
+}
+
+img {
+    padding: 0.2rem;
+}
+
 #change {
-    font-size: 16px;
-    font-family: Seurat;
+    font-family: 'Seurat', Arial, Helvetica, sans-serif;
+    font-size: 16px;    
     color: #fefae1;
     background-color: #0cc6b8;
-    padding: 0.6rem 3rem;
-    border-radius: 2rem;
-    border: 0.3rem solid transparent;
+    padding: 0.4rem 2rem;
+    margin-top: 0.8rem;
     outline: none;
-    position: relative;
-    margin-top: 0.755rem;
+    border: 0.3rem solid transparent;
+    border-radius: 2rem;
 }
 
 #change:hover {
@@ -105,16 +88,15 @@ footer {
   );
   animation: stripes 2s linear infinite;
   border: 0.3rem solid #4ae3d5;
+  cursor: pointer;
+}
+
+#description {
+    font-size: 14px;
+    margin: 0;
 }
 
 #highlight {
-    width: 37.5rem;
-    height: 2.9rem;
-    position: absolute;
-    margin-top: 11.2rem;
-    margin-left: 1.5rem;
-    z-index: 1;
-    border-radius: 0.6rem;
     background-color: #fff775;
     background-size: 2.5rem 2.5rem;
     background-image: linear-gradient(
@@ -127,105 +109,94 @@ footer {
         transparent 75%,
         transparent
     );
+    width: 37.5rem;
+    height: 2.5rem;
+    position: absolute;
+    margin-top: 9.4rem;
+    margin-left: 1.5rem;
+    border-radius: 0.6rem;
     animation: stripes 2s linear infinite;  
 }
 
 #left_info {
-    color: #5a5127;
     background-color: #fefae1;
     border: 0.6rem solid #fefae1;
     width: 19rem;
-    float: left;
-    min-height: 10rem;
-    transform: rotate(-2deg);
+    min-height: 11rem;
     opacity: 0;
+    display: inline-block;
+    margin-right: 0.5rem;
     box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.2);
 }
 
 #left_info:hover {
-    transform: scale(1.1) rotate(2deg);
+    transform: rotate(2deg);
 }
 
 #left_title {
-    width: 19rem;
-    height: 25rem;
+    height: 21rem;
     text-align: right;
-    float: left;
+    display: inline-block;
     position: relative;
-    z-index: 2;
+    margin-right: 1rem;
 }
 
 #left_title div {
     padding: 0.15rem;
 }
 
-#ribbon::after {
-    transform: scaleX(-1);
-}
-
-#ribbon::before {
-    left: 3em;
-}
-
-#ribbon::before, #ribbon::after {
-    content: url(resources/images/ribbon-end.png);
-    display: inline-block;
-}
-
-#ribbon {
-    font-size: 0;
-    white-space: nowrap;
-    position: relative;
-    top: 2.8rem;
-    filter: drop-shadow(0.2rem 0.4rem 0.2rem rgba(0,0,0,0.1));
-    z-index: 3;
-}
-
 #right_info {
-    color: #5a5127;
     background-color: #fefae1;
     border: 0.6rem solid #fefae1;
     width: 19rem;
-    float: right;
-    min-height: 10rem;
-    transform: rotate(2deg);
+    display: inline-block;
+    margin-left: 0.5rem;
+    min-height: 11rem;
     opacity: 0;
     box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.2);
 }
 
 #right_info:hover {
-    transform: scale(1.1) rotate(-2deg);
+    transform: rotate(-2deg);
 }
 
 #right_title {
-    width: 19rem;
-    height: 25rem;
+    height: 21rem;
     text-align: left;
-    float: right;
+    display: inline-block;
     position: relative;
-    z-index: 2;
+    margin-left: 1rem;
 }
 
 #right_title div {
     padding: 0.15rem;
 }
 
+#title_columns {
+    background-color: #ede5c1;
+    background-image: url(resources/images/titleseparator.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40.5rem;
+    border-radius: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
 #title_helper {
-    width: min-content;
-    height: 30.9rem;
-    position: relative;
-    margin: auto;
+    max-width: min-content;
     padding: 1rem;
     background-color: #fefae1;
-    border-radius: 2rem;
+    border-radius: 1rem;
     box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.2);
 }
 
 #title_info {
-    width: 43.75rem;
+    color: #5a5127;
+    width: 42rem;
     min-height: 13rem;
     position: relative;
-    margin: 2rem auto;
+    margin: 1rem auto;
 }
 
 .active {
@@ -233,16 +204,12 @@ footer {
 }
 
 .filler {
-    padding: 4.65rem;
+    padding: 3.6rem;
 }
 
 .pop {
     opacity: 1;
     transition: opacity 4s ease;
-}
-
-.seperator {
-    display: inline-block;
 }
 
 .task_description {
@@ -253,15 +220,5 @@ footer {
 .task_name {
     background-image: url(resources/images/task_name_back.png);
     background-repeat: repeat-x;
-    padding: 0.7rem;
-}
-
-.title_columns {
-    background-color: #ede5c1;
-    background-image: url(resources/images/titleseparator.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 40.5rem;
-    position: relative;
-    border-radius: 2rem;
+    padding: 0.8rem 0 1.5rem 0;
 }

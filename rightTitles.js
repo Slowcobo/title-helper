@@ -390,7 +390,7 @@ const rightTitles = [
         task: tasks[121]
     },
     {
-        title: 'Materlist',
+        title: 'Materialist',
         task: tasks[146]
     },
     {
