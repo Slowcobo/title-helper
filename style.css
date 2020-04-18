@@ -36,6 +36,7 @@ body {
 }
 
 div * {
+    scrollbar-width: none;
     overflow: scroll;
 }
 
@@ -214,7 +215,6 @@ img {
 
 .pop {
     opacity: 1;
-    transition: opacity 4s ease;
 }
 
 .task_description {
