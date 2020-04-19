@@ -228,12 +228,16 @@ img {
         height: 2.2rem;
     }
 
+    #left_info, #right_info {
+        float: none;
+    }
+
     #left_title, #right_title {
         font-size: 17px !important;
     }
 
-    #left_info, #right_info {
-        float: none;
+    #left_title div, #right_title div {
+        padding: 0.25rem;
     }
 
     .filler {
