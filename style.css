@@ -13,9 +13,6 @@
     50%  { transform: scale(1.05); }
 }
 
-@media screen and (max-width: 1020px) {
-}
-
 ::-webkit-scrollbar {
     display: none;
 }
@@ -24,7 +21,7 @@ body {
     font-family: 'Seurat', Arial, Helvetica, sans-serif;
     color: #948b6c;
     background-image: url(resources/images/pattern-leaves-turquoise.jpg);
-    width: 42.5rem;
+    min-width: 42rem;
     max-width: min-content;
     margin: auto;
     text-align: center;
@@ -110,11 +107,11 @@ img {
         transparent 75%,
         transparent
     );
-    width: 37.5rem;
+    width: 39rem;
     height: 2.5rem;
     position: absolute;
     margin-top: 8.4rem;
-    margin-left: 1.5rem;
+    margin-left: 0.5rem;
     border-radius: 0.6rem;
     animation: stripes 2s linear infinite;  
 }
@@ -122,11 +119,11 @@ img {
 #left_info {
     background-color: #fefae1;
     border: 0.6rem solid #fefae1;
-    width: 19rem;
+    width: 19.3rem;
     min-height: 11rem;
     opacity: 0;
-    display: inline-block;
-    margin-right: 0.5rem;
+    float: left;
+    margin: 1rem auto;
     box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.2);
 }
 
@@ -136,11 +133,11 @@ img {
 
 #left_title {
     font-size: 20px !important;
+    width: 48%;
     height: 19rem;
     text-align: right;
-    display: inline-block;
     position: relative;
-    margin-right: 1rem;
+    float: left;
 }
 
 #left_title div {
@@ -150,11 +147,11 @@ img {
 #right_info {
     background-color: #fefae1;
     border: 0.6rem solid #fefae1;
-    width: 19rem;
-    display: inline-block;
-    margin-left: 0.5rem;
+    width: 19.3rem;
+    margin: 1rem auto;
     min-height: 11rem;
     opacity: 0;
+    float: right;
     box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.2);
 }
 
@@ -164,11 +161,11 @@ img {
 
 #right_title {
     font-size: 20px !important;
+    width: 48%;
     height: 19rem;
     text-align: left;
-    display: inline-block;
     position: relative;
-    margin-left: 1rem;
+    float: right;
 }
 
 #right_title div {
@@ -180,8 +177,6 @@ img {
     background-image: url(resources/images/titleseparator.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    height: 19rem;
-    width: 40.5rem;
     border-radius: 1rem;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -196,10 +191,8 @@ img {
 
 #title_info {
     color: #5a5127;
-    width: 42rem;
     min-height: 13rem;
-    position: relative;
-    margin: 1rem auto;
+    margin-bottom: 1rem;
 }
 
 .active {
@@ -223,4 +216,27 @@ img {
     background-image: url(resources/images/task_name_back.png);
     background-repeat: repeat-x;
     padding: 0.8rem 0 2rem 0;
+}
+
+@media only screen and (max-width: 660px) {
+    body {
+        min-width: 21rem;
+    }
+
+    #highlight {
+        width: 18.7rem;
+        height: 2.2rem;
+    }
+
+    #left_title, #right_title {
+        font-size: 17px !important;
+    }
+
+    #left_info, #right_info {
+        float: none;
+    }
+
+    .filler {
+        padding: 3.2rem;
+    }
 }
